@@ -1,0 +1,165 @@
+{
+  "sectors": [
+    {
+      "id": "A",
+      "name": "Shoreline",
+      "map_index": 0,
+      "penalty_multiplier": 1.0,
+      "landmarks": [
+        "the Harbour Piers",
+        "the Coastal Reactor"
+      ],
+      "infrastructure": [
+        "Liman ve iskeleler",
+        "Kıyı reaktörü",
+        "Deniz feneri",
+        "Fırtınalara açık"
+      ],
+      "people": [
+        "Turistler",
+        "Liman işçileri"
+      ],
+      "landmark_risks": {
+        "the Harbour Piers": [
+          "flood",
+          "hurricane",
+          "chemical"
+        ],
+        "the Coastal Reactor": [
+          "nuclear"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "B",
+      "name": "Crestview",
+      "map_index": 1,
+      "penalty_multiplier": 1.0,
+      "landmarks": [
+        "the Private Substation",
+        "the Cliff Estates"
+      ],
+      "infrastructure": [
+        "Yamaç malikaneleri",
+        "Özel elektrik şebekesi",
+        "İstinat duvarları",
+        "Ağaçlık bahçeler"
+      ],
+      "people": [
+        "Varlıklı",
+        "Yoğun elektronik"
+      ],
+      "landmark_risks": {
+        "the Private Substation": [
+          "power_surge"
+        ],
+        "the Cliff Estates": [
+          "landslide",
+          "wildfire"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "C",
+      "name": "Downtown",
+      "map_index": 2,
+      "penalty_multiplier": 1.5,
+      "landmarks": [
+        "the Grid Hub",
+        "the Chem Depot",
+        "the Stadium"
+      ],
+      "infrastructure": [
+        "Kuleler ve stadyum",
+        "Kimyasal depolar",
+        "Ana güç merkezi",
+        "Yoğun trafik"
+      ],
+      "people": [
+        "En büyük nüfus",
+        "Genel Hastane",
+        "Hatalar 1.5 kat maliyetli"
+      ],
+      "landmark_risks": {
+        "the Grid Hub": [
+          "power_surge"
+        ],
+        "the Chem Depot": [
+          "chemical"
+        ],
+        "the Stadium": [
+          "riot",
+          "collision"
+        ]
+      },
+      "note": "Hastane bölgesi: hatalar 1.5 kat maliyetli"
+    },
+    {
+      "id": "D",
+      "name": "Lowrise",
+      "map_index": 3,
+      "penalty_multiplier": 1.0,
+      "landmarks": [
+        "the Night Market",
+        "the Old Blocks"
+      ],
+      "infrastructure": [
+        "Eski zayıf bloklar",
+        "Gece pazarı",
+        "Alçak kıyı şeridi",
+        "Dar sokaklar"
+      ],
+      "people": [
+        "Yoğun",
+        "Düşük gelir",
+        "Kalabalık pazarlar"
+      ],
+      "landmark_risks": {
+        "the Night Market": [
+          "riot",
+          "collision"
+        ],
+        "the Old Blocks": [
+          "earthquake",
+          "flood"
+        ]
+      },
+      "note": ""
+    },
+    {
+      "id": "E",
+      "name": "Ridgeline",
+      "map_index": 4,
+      "penalty_multiplier": 1.0,
+      "landmarks": [
+        "the Forest Lookout",
+        "the Switchback Slopes"
+      ],
+      "infrastructure": [
+        "Ormanlık yamaçlar",
+        "Volkanik bacalar",
+        "Telsiz kulesi",
+        "Tek yol"
+      ],
+      "people": [
+        "Seyrek kulübeler",
+        "Rasathane personeli",
+        "Yavaş erişim"
+      ],
+      "landmark_risks": {
+        "the Forest Lookout": [
+          "wildfire",
+          "volcano"
+        ],
+        "the Switchback Slopes": [
+          "landslide",
+          "earthquake"
+        ]
+      },
+      "note": "Tek giriş yolu: +3 sn yolculuk"
+    }
+  ],
+  "_help": "landmarks: names used in feed text ({landmark}). landmark_risks: which incidents happen at each landmark; an alert of that incident in this district is reported at that landmark, and the district file lists them. note: one short line on the file."
+}

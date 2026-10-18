@@ -1,0 +1,696 @@
+{
+  "_help": "Tokens: {sector} sector name, {sid} sector letter, {landmark} a landmark in that sector, {sensor} sensor id, {n1} 20-99, {n2} 100-899, {n3} 2-9. 'symptoms' pools give the first sensor reading and first call (ambiguous on purpose). Per incident: radio (Yellow, field report naming a landmark), call_confirm (Red), trend (Red, shown as a TRENDING group opinion: reliable), social (unused), rumor (single posts, false flags). Noise pools are unrelated to any alert.",
+  "handles": [
+    "sunny_dee",
+    "mark_44",
+    "tide_rider",
+    "hillside_hank",
+    "citygirl_j",
+    "nightowl",
+    "quake_kev",
+    "mom_of_3",
+    "dockworker_ray",
+    "anna_b",
+    "skater_z",
+    "old_pete",
+    "jules_runs",
+    "chef_tomasz",
+    "bus_driver_lou",
+    "kiki_codes",
+    "gran_mabel",
+    "night_nurse_io",
+    "drone_dan",
+    "lena_lens"
+  ],
+  "noise": {
+    "social": [
+      "anyone know if the 14 bus is running?",
+      "ugh the bridge traffic again",
+      "my cat is staring at the wall again. send help",
+      "remember when it rained for a week? good times",
+      "coffee machine broke at the office, true emergency",
+      "just saw a really big dog near {landmark}",
+      "so the new burger place by {landmark} is actually good",
+      "why do the ferries always run late",
+      "my neighbour's party is LOUD",
+      "can't find my keys, day ruined",
+      "lights flickered for half a second, nothing",
+      "is the sunset red today or is it me",
+      "street cleaners at {landmark} at 6am, why",
+      "new mural at {landmark}, go look",
+      "hot take: pineapple is fine on pizza",
+      "who parks like that. at {landmark}. seriously",
+      "gym is packed, new year energy in october",
+      "free samples at {landmark} today!",
+      "my phone says 3% and the charger is at home. pray for me",
+      "ok who keeps ringing my doorbell and running"
+    ],
+    "audio": [
+      "911: \"Hi, yes, my cat is stuck up a tree again. No, not an emergency. Sorry.\"",
+      "911: \"I want to report my neighbour's music. It's {n2} decibels, I measured.\"",
+      "911: \"Is the ferry running? Hello? Who is this?\"",
+      "RADIO: \"Unit 7 on a routine check near {landmark}, all quiet, over.\"",
+      "RADIO: \"Dispatch, patrol {n3} clear at {landmark}. Going for coffee, over.\" [static]",
+      "911: \"Someone left a shopping trolley on the road by {landmark}. It's a hazard. I think.\"",
+      "911: \"Hello? I think I pocket-dialled you. Sorry.\" [static]",
+      "RADIO: \"Reminder, shift change at {n1} past. Out.\"",
+      "911: \"There's a very loud bird outside. It won't stop. Is that your department?\""
+    ],
+    "sensor": [
+      "{sensor} SEISMIC: background noise only, nominal",
+      "{sensor} VOLTAGE: 230 V, nominal",
+      "{sensor} WATER PRESSURE: {n1} psi, nominal",
+      "{sensor} AIR QUALITY: index 1, good",
+      "{sensor} TRAFFIC: free flow, {n1} vehicles per minute",
+      "{sensor} WIND: light breeze, {n3} km/h",
+      "{sensor} TEMP: {n1} C, within seasonal range",
+      "{sensor} RADIATION: background level, nominal",
+      "{sensor} CROWD: density low, {n2} per 100 m2 steady"
+    ]
+  },
+  "incidents": {
+    "earthquake": {
+      "sensor": [
+        "{sensor} SEISMIC spike {n3}.{n1}",
+        "{sensor} GROUND shaking +0.{n1}g",
+        "{sensor} STRAIN: foundation shift {n1} mm",
+        "{sensor} SEISMIC P-wave burst, mag {n3}.{n1}"
+      ],
+      "call_vague": [
+        "911: \"The floor moved... hello?\" [static]",
+        "911: \"Dishes rattling. Something shook.\"",
+        "911: \"Chandelier swinging near {landmark}.\"",
+        "RADIO: \"Felt a jolt at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Building collapsed! People trapped at {landmark}!\" [static]",
+        "911: \"Ground split open at {landmark}! Rubble everywhere!\"",
+        "RADIO: \"Structural collapse at {landmark}. Need rescue teams.\""
+      ],
+      "social": [
+        "{sector} just SHOOK, buildings cracking!!",
+        "my building is leaning?? #quake",
+        "{landmark} is RUBBLE #earthquake",
+        "aftershock in {sector}??"
+      ],
+      "rumor": [
+        "felt a rumble in {sector}?",
+        "earthquake or trucks in {sector}?",
+        "glass rattled near {landmark}",
+        "dog freaked before the shake, {sector}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Buildings damaged near {landmark}.\"",
+        "RADIO / UTILITY: \"Gas valves tripped near {landmark}.\"",
+        "RADIO / FIRE: \"Partial collapse at {landmark}.\"",
+        "RADIO / SURVEY: \"Quake recorded under {landmark}.\""
+      ],
+      "trend": [
+        "{landmark} just SHOOK, buildings cracking",
+        "my building is leaning, {landmark}",
+        "{landmark} is RUBBLE",
+        "aftershock in {landmark}?"
+      ]
+    },
+    "landslide": {
+      "sensor": [
+        "{sensor} SLOPE tilt {n1} mm/hr",
+        "{sensor} SOIL moisture {n1}%, slope unstable",
+        "{sensor} GEO: slope shift {n1} cm",
+        "{sensor} RAINFALL {n2} mm, slope alarm"
+      ],
+      "call_vague": [
+        "911: \"Heard a rumble up the hill.\"",
+        "911: \"Trees leaning. Road looks odd.\" [static]",
+        "911: \"Rocks on the road near {landmark}.\"",
+        "RADIO: \"Mud on the road at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Landslide! Road buried, cars trapped at {landmark}!\" [static]",
+        "RADIO: \"Hillside collapsed at {landmark}. Need heavy equipment.\"",
+        "911: \"Mud wall hit the houses at {landmark}!\""
+      ],
+      "social": [
+        "hillside GONE near {landmark} #landslide",
+        "road buried in {sector}, we're stuck",
+        "huge mud flow, {sector}!!",
+        "{landmark} cut off by rocks"
+      ],
+      "rumor": [
+        "rocks on road near {landmark}?",
+        "rumbling uphill, {sector}",
+        "mud on the road, {sector}",
+        "slope looks weird at {landmark}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Road blocked by debris near {landmark}.\"",
+        "RADIO / RANGER: \"Slope movement at {landmark}.\"",
+        "RADIO / HIGHWAY: \"Rockfall on access road near {landmark}.\"",
+        "RADIO / GEOLOGY: \"Landslide risk raised near {landmark}.\""
+      ],
+      "trend": [
+        "hillside GONE near {landmark}",
+        "road buried in {landmark}, we're stuck",
+        "huge mud flow, {landmark}",
+        "{landmark} cut off by rocks"
+      ]
+    },
+    "volcano": {
+      "sensor": [
+        "{sensor} SEISMIC tremor, volcanic",
+        "{sensor} SO2 {n2} ppm, rising",
+        "{sensor} CRATER temp {n2} C",
+        "{sensor} GROUND swelling {n1} mm"
+      ],
+      "call_vague": [
+        "911: \"Smell of rotten eggs. Sky's hazy.\"",
+        "911: \"Ash on my car near {landmark}?\" [static]",
+        "911: \"Mountain's rumbling. Dogs barking.\"",
+        "RADIO: \"Steam from the peak. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"The volcano is erupting! Ash everywhere at {landmark}!\" [static]",
+        "RADIO: \"Eruption near {landmark}. Lava flow, evacuate!\"",
+        "911: \"Ash cloud over {landmark}! Can't see!\""
+      ],
+      "social": [
+        "VOLCANO erupting!! {sector} #eruption",
+        "ash falling on {landmark}",
+        "orange glow on the mountain, {sector}",
+        "ash everywhere, can't breathe, {sector}"
+      ],
+      "rumor": [
+        "smells like eggs, {sector}",
+        "steam from the mountain?",
+        "tremor in {sector}, anyone?",
+        "ash or fog near {landmark}?"
+      ],
+      "radio": [
+        "RADIO / OBSERVATORY: \"Eruption alert near {landmark}.\"",
+        "RADIO / POLICE: \"Ashfall, roads closed near {landmark}.\"",
+        "RADIO / RANGER: \"Lava reported near {landmark}.\"",
+        "RADIO / AVIATION: \"Ash cloud, flights grounded near {landmark}.\""
+      ],
+      "trend": [
+        "VOLCANO erupting {landmark}",
+        "ash falling on {landmark}",
+        "orange glow on the mountain, {landmark}",
+        "ash everywhere, can't breathe, {landmark}"
+      ]
+    },
+    "flood": {
+      "sensor": [
+        "{sensor} WATER level +{n1} cm",
+        "{sensor} PRESSURE drop, pipe burst",
+        "{sensor} TIDE surge {n3}.{n1} m",
+        "{sensor} DRAIN overflow {n1}%"
+      ],
+      "call_vague": [
+        "911: \"Water's coming up the street.\"",
+        "911: \"Puddle at the door, rising.\" [static]",
+        "911: \"Drains gurgling near {landmark}.\"",
+        "RADIO: \"Waves over the wall at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Flooding! Cars floating, people on roofs at {landmark}!\" [static]",
+        "RADIO: \"Water surge at {landmark}. Need water rescue.\"",
+        "911: \"The sea is in the streets at {landmark}!\""
+      ],
+      "social": [
+        "{sector} is UNDER WATER #flood",
+        "wave hit {landmark}!!",
+        "cars floating in {sector}",
+        "sea in the streets #tsunami?"
+      ],
+      "rumor": [
+        "puddles big in {sector}",
+        "high tide near {landmark}?",
+        "water main again, {sector}?",
+        "storm drains full, {sector}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Streets flooded near {landmark}.\"",
+        "RADIO / UTILITY: \"Water main burst near {landmark}.\"",
+        "RADIO / COAST: \"Surge warning at {landmark}.\"",
+        "RADIO / FIRE: \"Water rescue call at {landmark}.\""
+      ],
+      "trend": [
+        "{landmark} is UNDER WATER",
+        "wave hit {landmark}",
+        "cars floating in {landmark}",
+        "sea in the streets, {landmark}"
+      ]
+    },
+    "hurricane": {
+      "sensor": [
+        "{sensor} WIND {n2} km/h, gusting",
+        "{sensor} PRESSURE drop, storm cell",
+        "{sensor} ROTATION detected, {sector}",
+        "{sensor} RAIN {n2} mm/hr"
+      ],
+      "call_vague": [
+        "911: \"Wind is crazy. Roof shaking.\"",
+        "911: \"Debris flying around {landmark}.\" [static]",
+        "911: \"Power flickering, sky is green.\"",
+        "RADIO: \"Heavy wind at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Tornado! It's tearing up {landmark}!\" [static]",
+        "RADIO: \"Storm damage, roofs gone at {landmark}. Need rescue.\"",
+        "911: \"Hurricane winds! Trees down, people hurt at {landmark}!\""
+      ],
+      "social": [
+        "TORNADO in {sector}!! #storm",
+        "roof just flew off, {sector}",
+        "{landmark} wrecked by wind",
+        "hurricane hitting {sector} hard"
+      ],
+      "rumor": [
+        "windy in {sector}",
+        "storm coming? {sector}",
+        "trees swaying at {landmark}",
+        "sky looks green, {sector}"
+      ],
+      "radio": [
+        "RADIO / WEATHER: \"Severe storm warning near {landmark}.\"",
+        "RADIO / POLICE: \"Trees down, roads blocked near {landmark}.\"",
+        "RADIO / UTILITY: \"Lines down near {landmark}.\"",
+        "RADIO / WEATHER: \"Funnel cloud sighted at {landmark}.\""
+      ],
+      "trend": [
+        "TORNADO in {landmark}",
+        "roof just flew off, {landmark}",
+        "{landmark} wrecked by wind",
+        "hurricane hitting {landmark} hard"
+      ]
+    },
+    "nuclear": {
+      "sensor": [
+        "{sensor} RADIATION {n2} uSv/h, rising",
+        "{sensor} REACTOR coolant pressure LOW",
+        "{sensor} CORE temp {n2} C, high",
+        "{sensor} REACTOR scram alarm"
+      ],
+      "call_vague": [
+        "911: \"Sirens at the plant.\"",
+        "911: \"Plant steaming near {landmark}. Normal?\" [static]",
+        "911: \"Phone static, lights dim.\"",
+        "RADIO: \"Alarm at the reactor gate. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "RADIO: \"Reactor alarm! Radiation leak at the plant at {landmark}!\" [static]",
+        "911: \"Plant workers evacuating! Something's wrong at {landmark}!\"",
+        "RADIO: \"Reactor coolant failure. Need hazmat response at {landmark}!\""
+      ],
+      "social": [
+        "REACTOR LEAK in {sector}!! #nuclear",
+        "plant sirens won't stop, {sector}",
+        "radiation?? {sector} #meltdown",
+        "workers running from the plant"
+      ],
+      "rumor": [
+        "plant steaming again, {sector}",
+        "sirens at the reactor, test?",
+        "geiger app weird in {sector}",
+        "heard plant had trouble"
+      ],
+      "radio": [
+        "RADIO / REACTOR: \"Safety system tripped near {landmark}.\"",
+        "RADIO / POLICE: \"Roads closed near plant near {landmark}.\"",
+        "RADIO / GRID: \"Reactor offline, power dropping near {landmark}.\"",
+        "RADIO / HEALTH: \"Radiation advisory near {landmark}.\""
+      ],
+      "trend": [
+        "REACTOR LEAK in {landmark}",
+        "plant sirens won't stop, {landmark}",
+        "radiation? {landmark}",
+        "workers running from the plant, {landmark}"
+      ]
+    },
+    "chemical": {
+      "sensor": [
+        "{sensor} GAS {n2} ppm toxic",
+        "{sensor} AIR quality: toxic spike",
+        "{sensor} TANK pressure drop {n1}%",
+        "{sensor} PH {n3}.{n1}, corrosive"
+      ],
+      "call_vague": [
+        "911: \"Weird smell by the harbour.\"",
+        "911: \"Truck leaking yellow stuff.\" [static]",
+        "911: \"Eyes burning near {landmark}.\"",
+        "RADIO: \"Chemical odor at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Chemical cloud! People collapsing at {landmark}!\" [static]",
+        "RADIO: \"Tank rupture at {landmark}. Need hazmat!\"",
+        "911: \"Yellow fog at {landmark}! People choking!\""
+      ],
+      "social": [
+        "CHEMICAL CLOUD over {sector}!! #toxic",
+        "everyone coughing in {sector}",
+        "yellow fog at {landmark}",
+        "what leaked at {landmark}? #hazmat"
+      ],
+      "rumor": [
+        "weird smell, {sector} harbour",
+        "gas leak in {sector}?",
+        "bad smell at {landmark}",
+        "eyes itch near {landmark}"
+      ],
+      "radio": [
+        "RADIO / FIRE: \"Hazmat call near {landmark}.\"",
+        "RADIO / POLICE: \"Docks closed near {landmark}.\"",
+        "RADIO / PORT: \"Container leak at {landmark}.\"",
+        "RADIO / HEALTH: \"Breathing complaints at {landmark}.\""
+      ],
+      "trend": [
+        "CHEMICAL CLOUD over {landmark}",
+        "everyone coughing in {landmark}",
+        "yellow fog at {landmark}",
+        "what leaked at {landmark}?"
+      ]
+    },
+    "power_surge": {
+      "sensor": [
+        "{sensor} VOLTAGE {n2} V, surge",
+        "{sensor} GRID overload, breakers tripping",
+        "{sensor} TRANSFORMER temp critical",
+        "{sensor} BLACKOUT, feeder down"
+      ],
+      "call_vague": [
+        "911: \"Lights flickered. Smells burnt.\"",
+        "911: \"Everything went dark. Hello?\" [static]",
+        "911: \"Sparks near {landmark}.\"",
+        "RADIO: \"Power flicker at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Blackout! Transformer exploded at {landmark}!\" [static]",
+        "RADIO: \"Grid surge at {landmark}. Fires, need grid crew.\"",
+        "911: \"Power lines down at {landmark}, sparking!\""
+      ],
+      "social": [
+        "BLACKOUT in {sector}!! #power",
+        "transformer blew at {landmark}",
+        "everything's fried, {sector}",
+        "sparks everywhere, {sector}"
+      ],
+      "rumor": [
+        "lights flicker in {sector}",
+        "power cut, {sector}?",
+        "buzzing at {landmark}",
+        "wifi died, {sector}"
+      ],
+      "radio": [
+        "RADIO / UTILITY: \"Grid fault near {landmark}.\"",
+        "RADIO / POLICE: \"Traffic lights out near {landmark}.\"",
+        "RADIO / FIRE: \"Electrical fire at {landmark}.\"",
+        "RADIO / UTILITY: \"Rolling blackout near {landmark}.\""
+      ],
+      "trend": [
+        "BLACKOUT in {landmark}",
+        "transformer blew at {landmark}",
+        "everything's fried, {landmark}",
+        "sparks everywhere, {landmark}"
+      ]
+    },
+    "wildfire": {
+      "sensor": [
+        "{sensor} TEMP {n2} C, rising",
+        "{sensor} SMOKE particulates high",
+        "{sensor} THERMAL hotspot, {sector}",
+        "{sensor} WIND {n2} km/h, fire risk"
+      ],
+      "call_vague": [
+        "911: \"Smell of smoke on the wind.\"",
+        "911: \"Orange glow over {landmark}.\" [static]",
+        "911: \"Ash falling like snow.\"",
+        "RADIO: \"Smoke near {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Wildfire! Flames at {landmark}!\" [static]",
+        "RADIO: \"Fire front spreading at {landmark}. Need evacuation help.\"",
+        "911: \"We're surrounded by fire at {landmark}!\""
+      ],
+      "social": [
+        "WILDFIRE near {landmark} #fire",
+        "whole hill on fire, {sector}",
+        "smoke everywhere, {sector}",
+        "ash on my car, {sector}"
+      ],
+      "rumor": [
+        "bbq smoke or fire? {sector}",
+        "hazy sky, {sector}",
+        "smell of burning, {landmark}",
+        "orange sky, {sector}"
+      ],
+      "radio": [
+        "RADIO / FIRE: \"Wildfire reported near {landmark}.\"",
+        "RADIO / POLICE: \"Roads closed by fire near {landmark}.\"",
+        "RADIO / RANGER: \"Fire near {landmark}.\"",
+        "RADIO / WEATHER: \"Red flag fire alert near {landmark}.\""
+      ],
+      "trend": [
+        "WILDFIRE near {landmark}",
+        "whole hill on fire, {landmark}",
+        "smoke everywhere, {landmark}",
+        "ash on my car, {landmark}"
+      ]
+    },
+    "riot": {
+      "sensor": [
+        "{sensor} CROWD density high",
+        "{sensor} NOISE {n2} dB, sustained",
+        "{sensor} CAMERA motion, crowd surge",
+        "{sensor} GLASS break alarm, {sector}"
+      ],
+      "call_vague": [
+        "911: \"Big crowd, getting loud.\"",
+        "911: \"Shouting outside {landmark}.\" [static]",
+        "911: \"Shops closing early. Why?\"",
+        "RADIO: \"Crowd gathering at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Riot! Windows smashed, fires lit at {landmark}!\" [static]",
+        "RADIO: \"Mob at {landmark}. Need crowd control.\"",
+        "911: \"They're attacking the shops at {landmark}!\""
+      ],
+      "social": [
+        "RIOT at {landmark} #unrest",
+        "mob in {sector}, stay away",
+        "police lines broken, {sector}",
+        "fires on the streets, {sector}"
+      ],
+      "rumor": [
+        "protest in {sector}?",
+        "loud crowd, {landmark}",
+        "crowd near {landmark}, why?",
+        "police vans in {sector}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Unrest near {landmark}.\"",
+        "RADIO / TRANSIT: \"Station closed, crowds near {landmark}.\"",
+        "RADIO / POLICE: \"Riot report at {landmark}.\"",
+        "RADIO / MAYOR: \"Calm requested near {landmark}.\""
+      ],
+      "trend": [
+        "RIOT at {landmark}",
+        "mob in {landmark}, stay away",
+        "police lines broken, {landmark}",
+        "fires on the streets, {landmark}"
+      ]
+    },
+    "collision": {
+      "sensor": [
+        "{sensor} TRAFFIC stopped, {sector}",
+        "{sensor} IMPACT detected on highway",
+        "{sensor} CAMERA: multi-vehicle crash",
+        "{sensor} AIRBAG signal, multiple"
+      ],
+      "call_vague": [
+        "911: \"Loud bang on the road.\"",
+        "911: \"Cars stopped near {landmark}.\" [static]",
+        "911: \"Horns and skidding. Hello?\"",
+        "RADIO: \"Traffic jam at {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Pile-up! Cars on fire, people hurt at {landmark}!\" [static]",
+        "RADIO: \"Multi-car crash at {landmark}. Need rescue.\"",
+        "911: \"A bus flipped at {landmark}!\""
+      ],
+      "social": [
+        "huge crash at {landmark} #pileup",
+        "road blocked in {sector}",
+        "bus overturned, {sector}",
+        "sirens everywhere, {sector}"
+      ],
+      "rumor": [
+        "traffic is awful, {sector}",
+        "crash near {landmark}?",
+        "horns going off, {sector}",
+        "slow roads, {sector}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Crash, road closed near {landmark}.\"",
+        "RADIO / TRANSIT: \"Bus delays near {landmark}.\"",
+        "RADIO / FIRE: \"Vehicle rescue at {landmark}.\"",
+        "RADIO / HIGHWAY: \"Pile-up near {landmark}.\""
+      ],
+      "trend": [
+        "huge crash at {landmark}",
+        "road blocked in {landmark}",
+        "bus overturned, {landmark}",
+        "sirens everywhere, {landmark}"
+      ]
+    },
+    "evacuation": {
+      "sensor": [
+        "{sensor} CROWD surge at exits",
+        "{sensor} EXIT blocked, {sector}",
+        "{sensor} OCCUPANCY {n2}%, over limit",
+        "{sensor} ALARM, evacuation triggered"
+      ],
+      "call_vague": [
+        "911: \"Everyone's rushing out.\"",
+        "911: \"Alarm won't stop at {landmark}.\" [static]",
+        "911: \"People crowding, can't get out.\"",
+        "RADIO: \"Crowd near {landmark}. Over.\" [static]"
+      ],
+      "call_confirm": [
+        "911: \"Trapped civilians! Need to evacuate at {landmark}!\" [static]",
+        "RADIO: \"Civilians stuck at {landmark}. Need transport to hospital.\"",
+        "911: \"Please, people can't get out! Hospital at {landmark}!\""
+      ],
+      "social": [
+        "evacuation in {sector} #help",
+        "people stuck at {landmark}",
+        "everyone running, {sector}",
+        "exit blocked!! {sector}"
+      ],
+      "rumor": [
+        "alarm going off, {sector}",
+        "crowd at {landmark}, why?",
+        "drill in {sector}?",
+        "people leaving {landmark}"
+      ],
+      "radio": [
+        "RADIO / POLICE: \"Evacuation order near {landmark}.\"",
+        "RADIO / FIRE: \"Civilians trapped at {landmark}.\"",
+        "RADIO / HOSPITAL: \"Open beds, patients incoming near {landmark}.\"",
+        "RADIO / TRANSIT: \"Exit blocked near {landmark}.\""
+      ],
+      "trend": [
+        "evacuation in {landmark}",
+        "people stuck at {landmark}",
+        "everyone running, {landmark}",
+        "exit blocked {landmark}"
+      ]
+    }
+  },
+  "symptoms": {
+    "shaking": {
+      "sensor": [
+        "{sensor} VIBRATION {n3}.{n1} at {landmark}",
+        "{sensor} GROUND MOVEMENT, {landmark}",
+        "{sensor} TILT +0.{n1} deg near {landmark}"
+      ],
+      "call_vague": [
+        "911: \"Everything just shook near {landmark}.\"",
+        "911: \"Loud rumble by {landmark}.\" [static]",
+        "RADIO: \"Ground moved at {landmark}. Over.\" [static]"
+      ]
+    },
+    "smoke": {
+      "sensor": [
+        "{sensor} SMOKE particulates high, {landmark}",
+        "{sensor} AIR QUALITY poor near {landmark}",
+        "{sensor} HEAT {n2} C at {landmark}"
+      ],
+      "call_vague": [
+        "911: \"There's smoke over {landmark}.\"",
+        "911: \"Smells awful near {landmark}.\" [static]",
+        "RADIO: \"Smoke column at {landmark}. Over.\" [static]"
+      ]
+    },
+    "power": {
+      "sensor": [
+        "{sensor} GRID fluctuation {n1}%, {landmark}",
+        "{sensor} LINE fault near {landmark}",
+        "{sensor} VOLTAGE unstable at {landmark}"
+      ],
+      "call_vague": [
+        "911: \"Lights keep flickering by {landmark}.\"",
+        "911: \"Power went out near {landmark}.\" [static]",
+        "RADIO: \"Outage at {landmark}. Over.\" [static]"
+      ]
+    },
+    "water": {
+      "sensor": [
+        "{sensor} WATER LEVEL +{n1} cm, {landmark}",
+        "{sensor} DRAIN overflow near {landmark}"
+      ],
+      "call_vague": [
+        "911: \"Water coming up the street by {landmark}.\"",
+        "911: \"Drains backing up near {landmark}.\" [static]"
+      ]
+    },
+    "alarm": {
+      "sensor": [
+        "{sensor} SITE ALARM at {landmark}",
+        "{sensor} DOSIMETER high near {landmark}"
+      ],
+      "call_vague": [
+        "911: \"Sirens going off at {landmark}.\"",
+        "RADIO: \"Alarm at {landmark}. Over.\" [static]"
+      ]
+    },
+    "crowd": {
+      "sensor": [
+        "{sensor} CROWD density high, {landmark}",
+        "{sensor} TRAFFIC stopped near {landmark}"
+      ],
+      "call_vague": [
+        "911: \"Big crowd shouting at {landmark}.\"",
+        "911: \"Street's blocked near {landmark}.\" [static]"
+      ]
+    }
+  },
+  "casualty": {
+    "_help": "Medic assessments for casualty events, sent to the ECM. Each scenario is two reports; 'hospital' scenarios mean the right call is General Hospital, 'alt' scenarios mean the district's alternate clinic. Tokens: {n} injured count, {alt} alternate district name.",
+    "hospital": [
+      [
+        "{n} injured, three critical with internal bleeding.",
+        "Only General Hospital has surgeons on shift tonight."
+      ],
+      [
+        "{n} burn victims, several severe.",
+        "{alt} clinic has no burn unit."
+      ],
+      [
+        "{n} injured, two in cardiac arrest.",
+        "Road to {alt} is flooded. Hospital route is clear."
+      ],
+      [
+        "{n} injured, one child unresponsive.",
+        "{alt} clinic lost power an hour ago."
+      ]
+    ],
+    "alt": [
+      [
+        "{n} injured, mostly cuts and fractures.",
+        "General Hospital is at capacity and diverting."
+      ],
+      [
+        "{n} walking wounded, all stable.",
+        "Ring road to Downtown is blocked by debris."
+      ],
+      [
+        "{n} injured, none critical.",
+        "General Hospital trauma bay is in lockdown."
+      ],
+      [
+        "{n} smoke inhalation cases, mild.",
+        "{alt} clinic has beds free. General has a two-hour wait."
+      ]
+    ]
+  }
+}

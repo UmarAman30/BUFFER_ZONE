@@ -1,0 +1,79 @@
+{
+  "_help": "speed_mult scales all travel (lower is faster). terrain_mult is an extra multiplier by destination sector. Roster depot = the sector the unit starts in and returns to.",
+  "types": {
+    "quick_deploy": {
+      "name": "Rapid Response",
+      "speed_mult": 0.5,
+      "cooldown": 4.0,
+      "terrain_mult": {}
+    },
+    "earthquake": {
+      "name": "Heavy Rescue",
+      "speed_mult": 1.0,
+      "cooldown": 6.0,
+      "terrain_mult": {
+        "D": 0.7,
+        "E": 0.7
+      }
+    },
+    "emf": {
+      "name": "Hazmat & Grid",
+      "speed_mult": 1.0,
+      "cooldown": 6.0,
+      "terrain_mult": {}
+    }
+  },
+  "roster": [
+    {
+      "id": "qd_1",
+      "callsign": "RAPID-1",
+      "type": "quick_deploy",
+      "depot": "C"
+    },
+    {
+      "id": "eq_1",
+      "callsign": "RESCUE-1",
+      "type": "earthquake",
+      "depot": "A"
+    },
+    {
+      "id": "eq_2",
+      "callsign": "RESCUE-2",
+      "type": "earthquake",
+      "depot": "D"
+    },
+    {
+      "id": "eq_3",
+      "callsign": "RESCUE-3",
+      "type": "earthquake",
+      "depot": "E"
+    },
+    {
+      "id": "emf_1",
+      "callsign": "HAZMAT-1",
+      "type": "emf",
+      "depot": "B"
+    },
+    {
+      "id": "emf_2",
+      "callsign": "HAZMAT-2",
+      "type": "emf",
+      "depot": "C"
+    },
+    {
+      "id": "emf_3",
+      "callsign": "HAZMAT-3",
+      "type": "emf",
+      "depot": "A"
+    }
+  ],
+  "_roles": "Heavy Rescue: earthquake, landslide, volcano, flood, storm. Hazmat & Grid: reactor, chemical, power. Rapid Response: wildfire, riot, crash, evacuation.",
+  "reserves": [
+    {
+      "id": "qd_2",
+      "callsign": "RAPID-2",
+      "type": "quick_deploy",
+      "depot": "D"
+    }
+  ]
+}

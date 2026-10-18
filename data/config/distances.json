@@ -1,0 +1,27 @@
+{
+  "_help": "Travel time in seconds at speed 1.0 between sectors (symmetric, list each pair once). A unit's real time = (distance + arrival_penalty of the destination + incident access_delay) x type speed_mult x type terrain_mult for the destination sector. Working inside the unit's own sector costs local_time.",
+  "local_time": 1.0,
+  "matrix": {
+    "A": {
+      "B": 9.0,
+      "C": 5.0,
+      "D": 3.0,
+      "E": 8.0
+    },
+    "B": {
+      "C": 5.0,
+      "D": 8.0,
+      "E": 3.0
+    },
+    "C": {
+      "D": 4.0,
+      "E": 5.0
+    },
+    "D": {
+      "E": 8.0
+    }
+  },
+  "arrival_penalty": {
+    "E": 3.0
+  }
+}

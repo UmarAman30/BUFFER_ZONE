@@ -1,0 +1,194 @@
+{
+  "incidents": [
+    {
+      "id": "earthquake",
+      "name": "Earthquake",
+      "weight": 1.0,
+      "min_time": 0,
+      "prone": [
+        "D",
+        "E"
+      ],
+      "perfect": "earthquake",
+      "semi": "quick_deploy",
+      "wrong": "emf",
+      "sensor": "seismic",
+      "symptom": "shaking",
+      "risk_name": "Quakes"
+    },
+    {
+      "id": "landslide",
+      "access_delay": 4.0,
+      "name": "Landslide",
+      "weight": 1.0,
+      "min_time": 0,
+      "prone": [
+        "E",
+        "B"
+      ],
+      "perfect": "earthquake",
+      "semi": "quick_deploy",
+      "wrong": "emf",
+      "sensor": "slope_tilt",
+      "symptom": "shaking",
+      "risk_name": "Landslides"
+    },
+    {
+      "id": "volcano",
+      "name": "Volcanic Eruption",
+      "weight": 0.5,
+      "min_time": 120,
+      "prone": [
+        "E"
+      ],
+      "perfect": "earthquake",
+      "semi": "quick_deploy",
+      "wrong": "emf",
+      "sensor": "so2_heat",
+      "symptom": "smoke",
+      "risk_name": "Eruptions"
+    },
+    {
+      "id": "flood",
+      "access_delay": 3.0,
+      "name": "Flood / Tsunami",
+      "weight": 1.0,
+      "min_time": 0,
+      "prone": [
+        "A",
+        "D"
+      ],
+      "perfect": "earthquake",
+      "semi": "quick_deploy",
+      "wrong": "emf",
+      "sensor": "water_pressure",
+      "symptom": "water",
+      "risk_name": "Floods"
+    },
+    {
+      "id": "hurricane",
+      "name": "Hurricane / Tornado",
+      "weight": 0.8,
+      "min_time": 60,
+      "prone": [
+        "A"
+      ],
+      "perfect": "earthquake",
+      "semi": "emf",
+      "wrong": "quick_deploy",
+      "sensor": "wind_pressure",
+      "symptom": "power",
+      "risk_name": "Storms"
+    },
+    {
+      "id": "nuclear",
+      "name": "Nuclear Reactor Failure",
+      "weight": 0.4,
+      "min_time": 180,
+      "prone": [
+        "A"
+      ],
+      "perfect": "emf",
+      "semi": "earthquake",
+      "wrong": "quick_deploy",
+      "sensor": "radiation",
+      "symptom": "alarm",
+      "risk_name": "Reactor faults"
+    },
+    {
+      "id": "chemical",
+      "name": "Chemical Leak",
+      "weight": 0.8,
+      "min_time": 30,
+      "prone": [
+        "C",
+        "A"
+      ],
+      "perfect": "emf",
+      "semi": "quick_deploy",
+      "wrong": "earthquake",
+      "sensor": "gas_ppm",
+      "symptom": "smoke",
+      "risk_name": "Chemical leaks"
+    },
+    {
+      "id": "power_surge",
+      "name": "Power Surge / Blackout",
+      "weight": 1.0,
+      "min_time": 0,
+      "prone": [
+        "B",
+        "C"
+      ],
+      "perfect": "emf",
+      "semi": "quick_deploy",
+      "wrong": "earthquake",
+      "sensor": "voltage",
+      "symptom": "power",
+      "risk_name": "Grid failures"
+    },
+    {
+      "id": "wildfire",
+      "name": "Wildfire",
+      "weight": 0.8,
+      "min_time": 30,
+      "prone": [
+        "E",
+        "B"
+      ],
+      "perfect": "quick_deploy",
+      "semi": "earthquake",
+      "wrong": "emf",
+      "sensor": "heat_smoke",
+      "symptom": "smoke",
+      "risk_name": "Wildfires"
+    },
+    {
+      "id": "riot",
+      "name": "Riot / Mob",
+      "weight": 0.7,
+      "min_time": 60,
+      "prone": [
+        "C",
+        "D"
+      ],
+      "perfect": "quick_deploy",
+      "semi": "earthquake",
+      "wrong": "emf",
+      "sensor": "crowd_noise",
+      "symptom": "crowd",
+      "risk_name": "Riots"
+    },
+    {
+      "id": "collision",
+      "name": "Vehicle Collision",
+      "weight": 0.8,
+      "min_time": 0,
+      "prone": [
+        "C",
+        "D"
+      ],
+      "perfect": "quick_deploy",
+      "semi": "earthquake",
+      "wrong": "emf",
+      "sensor": "traffic_halt",
+      "symptom": "crowd",
+      "risk_name": "Pile-ups"
+    },
+    {
+      "id": "evacuation",
+      "name": "Mass Evacuation",
+      "weight": 0.4,
+      "min_time": 120,
+      "prone": [],
+      "special": "evacuation",
+      "perfect": "quick_deploy",
+      "semi": "emf",
+      "wrong": "earthquake",
+      "sensor": "crowd_noise",
+      "symptom": "crowd",
+      "risk_name": "Evacuations"
+    }
+  ],
+  "_symptoms": "The first sensor reading and first call come from the incident's symptom group (feed_content.json 'symptoms'), so they fit several disasters. The district's RISKS narrow it down; later clues confirm."
+}

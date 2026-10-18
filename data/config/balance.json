@@ -1,0 +1,175 @@
+{
+  "debug": false,
+  "green_start": 40.0,
+  "yellow_at": 22.0,
+  "red_at": 10.0,
+  "reward": {
+    "green": 10.0,
+    "yellow": 6.0,
+    "red": 3.0
+  },
+  "expiry_penalty": 10.0,
+  "stranded_penalty": 15.0,
+  "stranded_retreat_time": 14.0,
+  "semi_work_time": 12.0,
+  "semi_reward_mult": 0.5,
+  "semi_evac_time_mult": 1.5,
+  "hospital_sector": "C",
+  "evac_load_time": 2.0,
+  "evac_leg_base": 3.0,
+  "evac_leg_per_step": 2.0,
+  "spawn": {
+    "first_delay": 4.0,
+    "interval_start": 14.0,
+    "interval_min": 4.0,
+    "ramp_seconds": 600.0,
+    "max_alerts_start": 2,
+    "max_alerts_cap": 8,
+    "prone_weight_mult": 4.0,
+    "yellow_start_after": 60.0,
+    "yellow_start_max_chance": 0.4,
+    "red_start_after": 120.0,
+    "red_start_max_chance": 0.2,
+    "chance_ramp_seconds": 300.0
+  },
+  "feed": {
+    "min_gap": 3.5,
+    "call_vague_delay": 2.5,
+    "confirm_delay": 0.5,
+    "rumor_interval_start": 24,
+    "rumor_interval_min": 14,
+    "rumor_ramp_seconds": 600.0,
+    "false_flag_chance": 0.3,
+    "noise_channel_weights": {
+      "social": 1.5,
+      "audio": 1.0,
+      "sensor": 1.0
+    },
+    "radio_delay": 2.0,
+    "trend_delay": 1.5,
+    "trend_chance": 0.8
+  },
+  "difficulty": {
+    "_help": "Threat level rises at each time in level_times (seconds; level 1 = THREAT LEVEL 2). Before the pace table: spawn interval x spawn_interval_mult per level. Trust penalties x (1 + penalty_growth * level). max open alerts + alerts_per_level.",
+    "step_seconds": 180.0,
+    "spawn_interval_mult": 0.7,
+    "feed_gap_mult": 0.85,
+    "feed_gap_min": 2.0,
+    "penalty_growth": 0.25,
+    "alerts_per_level": 2,
+    "level_times": [
+      0.0,
+      180.0,
+      360.0,
+      480.0
+    ]
+  },
+  "standby_seconds": 10.0,
+  "shift_length": 600.0,
+  "stars": {
+    "_help": "Lasting shift_length seconds wins the shift: all 4 stars. Losing early gives 1 star, or 2 after thresholds[0] seconds.",
+    "thresholds": [
+      300.0
+    ]
+  },
+  "casualty": {
+    "_help": "Rare casualty events: route the injured to the hospital or the source district's alternate clinic. Spawn chance per spawn tick ramps (t/peak_at)^2 * peak_chance up to peak_at seconds, then grows by growth_per_minute up to cap.",
+    "peak_at": 480.0,
+    "peak_chance": 0.16,
+    "growth_per_minute": 0.03,
+    "cap": 0.35,
+    "max_active": 2,
+    "time": 30.0,
+    "reward": 8.0,
+    "penalty": 10.0,
+    "first_report_delay": 1.5,
+    "second_report_delay": 5.0
+  },
+  "relieved_cooldown": 5.0,
+  "intensity": {
+    "_help": "early_boost: spawns come this much more often until early_until seconds.",
+    "early_until": 180.0,
+    "early_boost": 1.1
+  },
+  "missile": {
+    "_help": "Mystery event at `at` s: a first missile (flight `first_flight` s) hits a random district (no trust loss, a yellow first_incident alert there), then the override console: type the code (codes = symbol counts) through the cipher before `time` s run out. Saved: +reward trust. Hit: -hit_trust, hit_alerts red alerts in the district. Fear 0-100 drives the cipher glitches; decay_* is per second after the event.",
+    "at": 240.0,
+    "time": 25.0,
+    "codes": [
+      4
+    ],
+    "stage_names": [
+      "OVERRIDE"
+    ],
+    "error_lock": 1.0,
+    "reward": 5.0,
+    "hit_trust": 25.0,
+    "hit_alerts": 2,
+    "hit_incidents": [
+      "wildfire",
+      "landslide",
+      "chemical"
+    ],
+    "fear": {
+      "first_hit": 30.0,
+      "per_second": 3.5,
+      "per_error": 9.0,
+      "per_stage": -12.0,
+      "hit": 45.0,
+      "glitch_from": 35.0,
+      "decay_saved": 12.0,
+      "decay_hit": 2.5
+    },
+    "first_incident": "wildfire",
+    "first_flight": 3.0
+  },
+  "rescue": {
+    "_help": "One-off at first_at: Rapid Response reserve team stranded; only only_type (Heavy Rescue) can save it within time s: it joins you, trust +reward. Fail: same loss as a missed alert. From `lead` s before until it is over, at most max_other_alerts other alerts are open.",
+    "first_at": 360.0,
+    "jitter": 0.0,
+    "time": 50.0,
+    "reward": 5.0,
+    "max_active": 1,
+    "only_type": "earthquake",
+    "lead": 40.0,
+    "max_other_alerts": 2
+  },
+  "pace": [
+    {
+      "_help": "From the rescue minute on: per threat stage, seconds between spawns, max open alerts, and the chance a new alert starts Yellow / Red (rest Green). The 480 row is THREAT LEVEL 4 (minute 8), a spike about 15% steeper than the old minute-9 one.",
+      "from": 360,
+      "interval": 8.5,
+      "max_alerts": 4,
+      "yellow": 0.55,
+      "red": 0.1
+    },
+    {
+      "from": 480,
+      "interval": 5.6,
+      "max_alerts": 6,
+      "yellow": 0.46,
+      "red": 0.27
+    },
+    {
+      "from": 720,
+      "interval": 5.0,
+      "max_alerts": 7,
+      "yellow": 0.4,
+      "red": 0.3
+    },
+    {
+      "from": 900,
+      "interval": 4.0,
+      "max_alerts": 8,
+      "yellow": 0.4,
+      "red": 0.35
+    }
+  ],
+  "relief": {
+    "_help": "If trust falls by `drop` points within `window` seconds (after the rescue minute), new alerts are all Green for `duration` seconds and come interval_mult x slower.",
+    "drop": 40.0,
+    "window": 20.0,
+    "duration": 30.0,
+    "interval_mult": 1.3
+  }
+}

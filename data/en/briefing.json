@@ -1,0 +1,52 @@
+{
+  "_help": "Text for the briefing book (scripts/ui/briefing.gd). One entry per tab. 'body' lines are joined with newlines and support BBCode. The drawn diagram on the right page is in briefing.gd.",
+  "tabs": [
+    {
+      "tab": "MISSION",
+      "title": "YOUR MISSION",
+      "body": [
+        "[color=#ffd933]SURVIVE THE 10-MINUTE SHIFT[/color]",
+        "Keep the PUBLIC TRUST bar above zero until the timer reaches 10:00. If trust hits zero, the shift is over.",
+        "",
+        "[color=#ffd933]HOW TRUST CHANGES[/color]",
+        "Sending the right team wins trust back. Letting an alert run out, or sending the wrong team, costs trust.",
+        "",
+        "[color=#ffd933]ANSWER ALERTS EARLY[/color]",
+        "Every alert starts green, then turns yellow, then red. The sooner you send a team, the more trust you earn."
+      ]
+    },
+    {
+      "tab": "DISPATCH",
+      "title": "READ, THEN DISPATCH",
+      "body": [
+        "[color=#ffd933]CHECK THE LIVE FEED[/color]",
+        "Right-click anywhere to open the feed, and again to close it. Reports often arrive before the alert does, so check it regularly.",
+        "",
+        "[color=#ffd933]SEND A TEAM[/color]",
+        "- Click the alert, then click a team.",
+        "- Or press 1, 2, 3, then click the alert.",
+        "- Or drag a team card onto the alert.",
+        "",
+        "[color=#ffd933]REUSE FINISHED TEAMS[/color]",
+        "A finished team waits on the map with a glowing tag. Click or drag it to the next alert."
+      ]
+    },
+    {
+      "tab": "CONTROLS",
+      "title": "PAUSE AND CONTROLS",
+      "body": [
+        "[color=#ffd933]PAUSE ANY TIME[/color]",
+        "Press ESC to pause the shift. The timer and every alert stop until you resume.",
+        "",
+        "[color=#ffd933]READ THIS AGAIN[/color]",
+        "In the pause menu, choose CONTROLS to open this briefing whenever you need a reminder.",
+        "",
+        "[color=#ffd933]QUICK KEYS[/color]",
+        "- Right-click: open or close the live feed",
+        "- 1, 2, 3: pick a team",
+        "- Shift + click a sector: see its landmarks",
+        "- ESC: pause"
+      ]
+    }
+  ]
+}

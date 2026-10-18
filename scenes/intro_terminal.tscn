@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cyuq5efwh53e8"]
+
+[ext_resource type="Script" uid="uid://wstkhknc6j46" path="res://scripts/scenes/intro_terminal.gd" id="1_q3roi"]
+[ext_resource type="PackedScene" uid="uid://cn8v7fy4apfha" path="res://scenes/crt_overlay.tscn" id="1_w5mci"]
+[ext_resource type="FontFile" uid="uid://6chub4kblbua" path="res://assets/fonts/HomeVideo-Regular.ttf" id="2_85bq7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85bq7"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="IntroTerminal" type="Control" unique_id=999756941]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q3roi")
+
+[node name="Background" type="ColorRect" parent="." unique_id=820095717]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=206006983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 160
+theme_override_constants/margin_bottom = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1679117197]
+layout_mode = 2
+
+[node name="TerminalOutput" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=676279026]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_85bq7")
+theme_override_font_sizes/normal_font_size = 52
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
+bbcode_enabled = true
+scroll_following = true
+autowrap_mode = 3
+
+[node name="UserInputLine" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=2139546590]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_85bq7")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_85bq7")
+placeholder_text = "Type your response here...."
+
+[node name="CRT_overlay" parent="." unique_id=559974282 instance=ExtResource("1_w5mci")]
+layer = 100

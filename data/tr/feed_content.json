@@ -1,0 +1,696 @@
+{
+ "_help": "Türkçe metin havuzu (feed_content.json ile aynı yapı). Bölge ve önemli nokta adları İngilizce kalır.",
+ "handles": [
+  "sunny_dee",
+  "mark_44",
+  "tide_rider",
+  "hillside_hank",
+  "citygirl_j",
+  "nightowl",
+  "quake_kev",
+  "mom_of_3",
+  "dockworker_ray",
+  "anna_b",
+  "skater_z",
+  "old_pete",
+  "jules_runs",
+  "chef_tomasz",
+  "bus_driver_lou",
+  "kiki_codes",
+  "gran_mabel",
+  "night_nurse_io",
+  "drone_dan",
+  "lena_lens"
+ ],
+ "noise": {
+  "social": [
+   "14 numaralı otobüs çalışıyor mu bilen var mı?",
+   "of yine köprü trafiği",
+   "kedim yine duvara bakıyor. yardım gönderin",
+   "bir hafta yağmur yağdığı zamanı hatırlıyor musunuz? güzel günlerdi",
+   "ofisteki kahve makinesi bozuldu, gerçek acil durum",
+   "{landmark} yakınında kocaman bir köpek gördüm",
+   "{landmark} yanındaki yeni burgerci gerçekten iyiymiş",
+   "vapurlar neden hep geç kalıyor",
+   "komşunun partisi ÇOK GÜRÜLTÜLÜ",
+   "anahtarlarımı bulamıyorum, gün mahvoldu",
+   "ışıklar yarım saniye titredi, bir şey yok",
+   "bugün gün batımı mı kırmızı yoksa bana mı öyle geliyor",
+   "sabah 6da {landmark} önünde sokak temizliği, neden",
+   "{landmark} duvarına yeni bir mural yapılmış, gidin bakın",
+   "tartışmalı görüş: pizzada ananas gayet iyi",
+   "kim böyle park eder. {landmark} önünde. cidden",
+   "spor salonu dolu, ekimde yılbaşı enerjisi",
+   "bugün {landmark} önünde bedava numune var!",
+   "telefon %3 ve şarj aleti evde. dua edin",
+   "tamam kim sürekli zilimi çalıp kaçıyor"
+  ],
+  "audio": [
+   "911: \"Merhaba, evet, kedim yine ağaçta kaldı. Hayır, acil değil. Özür dilerim.\"",
+   "911: \"Komşumun müziğini şikayet etmek istiyorum. {n2} desibel, ölçtüm.\"",
+   "911: \"Vapur çalışıyor mu? Alo? Kimsiniz?\"",
+   "TELSİZ: \"Ekip 7, {landmark} yakınında rutin kontrolde, her şey sakin, tamam.\"",
+   "TELSİZ: \"Merkez, devriye {n3} {landmark} önünde temiz. Kahveye gidiyoruz, tamam.\" [parazit]",
+   "911: \"Biri {landmark} yanında yola alışveriş arabası bırakmış. Tehlikeli. Galiba.\"",
+   "911: \"Alo? Sanırım cebimde yanlışlıkla aradım. Pardon.\" [parazit]",
+   "TELSİZ: \"Hatırlatma, vardiya değişimi {n1} geçe. Bitti.\"",
+   "911: \"Dışarıda çok gürültülü bir kuş var. Susmuyor. Bu sizin işiniz mi?\""
+  ],
+  "sensor": [
+   "{sensor} SİSMİK: yalnızca arka plan gürültüsü, normal",
+   "{sensor} GERİLİM: 230 V, normal",
+   "{sensor} SU BASINCI: {n1} psi, normal",
+   "{sensor} HAVA KALİTESİ: indeks 1, iyi",
+   "{sensor} TRAFİK: akıcı, dakikada {n1} araç",
+   "{sensor} RÜZGAR: hafif esinti, {n3} km/sa",
+   "{sensor} SICAKLIK: {n1} C, mevsim normallerinde",
+   "{sensor} RADYASYON: arka plan seviyesi, normal",
+   "{sensor} KALABALIK: yoğunluk düşük, 100 m2 başına {n2}, sabit"
+  ]
+ },
+ "incidents": {
+  "earthquake": {
+   "sensor": [
+    "{sensor} SİSMİK sıçrama {n3}.{n1}",
+    "{sensor} ZEMİN sarsıntısı +0.{n1}g",
+    "{sensor} GERİLME: temel kayması {n1} mm",
+    "{sensor} SİSMİK P-dalgası, büyüklük {n3}.{n1}"
+   ],
+   "call_vague": [
+    "911: \"Yer oynadı... alo?\" [parazit]",
+    "911: \"Tabaklar tıngırdıyor. Bir şey sallandı.\"",
+    "911: \"{landmark} yakınında avize sallanıyor.\"",
+    "TELSİZ: \"{landmark} çevresinde sarsıntı hissedildi. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Bina çöktü! {landmark} çevresinde insanlar mahsur!\" [parazit]",
+    "911: \"{landmark} çevresinde yer yarıldı! Her yer enkaz!\"",
+    "TELSİZ: \"{landmark} çevresinde yapısal çökme. Kurtarma ekibi lazım.\""
+   ],
+   "social": [
+    "{sector} az önce SALLANDI, binalar çatlıyor!!",
+    "binam yamuldu mu?? #deprem",
+    "{landmark} ENKAZ YIĞINI oldu #deprem",
+    "{sector} bölgesinde artçı mı??"
+   ],
+   "rumor": [
+    "{sector} bölgesinde bir gümbürtü hisseden var mı?",
+    "{sector} bölgesinde deprem mi kamyon mu?",
+    "{landmark} yakınında camlar tıngırdadı",
+    "sarsıntıdan önce köpek çıldırdı, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"{landmark} yakınında hasarlı binalar.\"",
+    "TELSİZ / ALTYAPI: \"{landmark} yakınında gaz vanaları kapandı.\"",
+    "TELSİZ / İTFAİYE: \"{landmark} çevresinde kısmi çökme.\"",
+    "TELSİZ / ÖLÇÜM: \"{landmark} altında deprem kaydedildi.\""
+   ],
+   "trend": [
+    "{landmark} az önce SALLANDI, binalar çatlıyor",
+    "binam yamuldu, {landmark}",
+    "{landmark} ENKAZ YIĞINI oldu",
+    "{landmark} çevresinde artçı mı?"
+   ]
+  },
+  "landslide": {
+   "sensor": [
+    "{sensor} YAMAÇ eğimi {n1} mm/sa",
+    "{sensor} TOPRAK nemi %{n1}, yamaç dengesiz",
+    "{sensor} JEO: yamaç kayması {n1} cm",
+    "{sensor} YAĞIŞ {n2} mm, yamaç alarmı"
+   ],
+   "call_vague": [
+    "911: \"Tepeden bir gümbürtü geldi.\"",
+    "911: \"Ağaçlar eğiliyor. Yol tuhaf görünüyor.\" [parazit]",
+    "911: \"{landmark} yakınında yolda kayalar var.\"",
+    "TELSİZ: \"{landmark} çevresinde yolda çamur. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Heyelan! {landmark} çevresinde yol gömüldü, arabalar mahsur!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde yamaç çöktü. İş makinesi lazım.\"",
+    "911: \"{landmark} çevresinde çamur duvarı evlere çarptı!\""
+   ],
+   "social": [
+    "{landmark} yakınında yamaç YOK OLDU #heyelan",
+    "{sector} bölgesinde yol gömüldü, mahsur kaldık",
+    "kocaman çamur akıntısı, {sector}!!",
+    "{landmark} kayalarla kapandı"
+   ],
+   "rumor": [
+    "{landmark} yakınında yolda kaya mı var?",
+    "tepede gümbürtü var, {sector}",
+    "yolda çamur var, {sector}",
+    "{landmark} çevresinde yamaç tuhaf görünüyor"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"{landmark} yakınında yol molozla kapandı.\"",
+    "TELSİZ / KORUCU: \"{landmark} çevresinde yamaç hareketi.\"",
+    "TELSİZ / KARAYOLLARI: \"{landmark} yakınında erişim yoluna kaya düştü.\"",
+    "TELSİZ / JEOLOJİ: \"{landmark} yakınında heyelan riski arttı.\""
+   ],
+   "trend": [
+    "{landmark} yakınında yamaç YOK OLDU",
+    "{landmark} bölgesinde yol gömüldü, mahsur kaldık",
+    "kocaman çamur akıntısı, {landmark}",
+    "{landmark} kayalarla kapandı"
+   ]
+  },
+  "volcano": {
+   "sensor": [
+    "{sensor} SİSMİK titreşim, volkanik",
+    "{sensor} SO2 {n2} ppm, yükseliyor",
+    "{sensor} KRATER sıcaklığı {n2} C",
+    "{sensor} ZEMİN şişmesi {n1} mm"
+   ],
+   "call_vague": [
+    "911: \"Çürük yumurta kokusu var. Gökyüzü puslu.\"",
+    "911: \"{landmark} yakınında arabamın üstünde kül mü var?\" [parazit]",
+    "911: \"Dağ gürlüyor. Köpekler havlıyor.\"",
+    "TELSİZ: \"Zirveden buhar çıkıyor. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Yanardağ patlıyor! {landmark} çevresinde her yer kül!\" [parazit]",
+    "TELSİZ: \"{landmark} yakınında patlama. Lav akıyor, tahliye edin!\"",
+    "911: \"{landmark} üzerinde kül bulutu! Hiçbir şey göremiyorum!\""
+   ],
+   "social": [
+    "YANARDAĞ patlıyor!! {sector} #patlama",
+    "{landmark} üzerine kül yağıyor",
+    "dağda turuncu parıltı, {sector}",
+    "her yer kül, nefes alamıyorum, {sector}"
+   ],
+   "rumor": [
+    "yumurta gibi kokuyor, {sector}",
+    "dağdan buhar mı çıkıyor?",
+    "{sector} bölgesinde sarsıntı, hisseden?",
+    "{landmark} yakınında kül mü sis mi?"
+   ],
+   "radio": [
+    "TELSİZ / RASATHANE: \"{landmark} yakınında patlama uyarısı.\"",
+    "TELSİZ / POLİS: \"Kül yağışı, {landmark} yakınında yollar kapalı.\"",
+    "TELSİZ / KORUCU: \"{landmark} yakınında lav bildirildi.\"",
+    "TELSİZ / HAVACILIK: \"Kül bulutu, {landmark} yakınında uçuşlar durduruldu.\""
+   ],
+   "trend": [
+    "YANARDAĞ patlıyor, {landmark}",
+    "{landmark} üzerine kül yağıyor",
+    "dağda turuncu parıltı, {landmark}",
+    "her yer kül, nefes alamıyorum, {landmark}"
+   ]
+  },
+  "flood": {
+   "sensor": [
+    "{sensor} SU seviyesi +{n1} cm",
+    "{sensor} BASINÇ düşüşü, boru patladı",
+    "{sensor} GELGİT kabarması {n3}.{n1} m",
+    "{sensor} GİDER taşması %{n1}"
+   ],
+   "call_vague": [
+    "911: \"Su sokaktan yukarı çıkıyor.\"",
+    "911: \"Kapının önünde su birikiyor, yükseliyor.\" [parazit]",
+    "911: \"{landmark} yakınında giderler fokurduyor.\"",
+    "TELSİZ: \"{landmark} çevresinde dalgalar duvarı aşıyor. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Sel! {landmark} çevresinde arabalar yüzüyor, insanlar çatılarda!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde su baskını. Suda kurtarma lazım.\"",
+    "911: \"{landmark} çevresinde deniz sokaklara girdi!\""
+   ],
+   "social": [
+    "{sector} SULAR ALTINDA #sel",
+    "dalga {landmark} çevresini vurdu!!",
+    "{sector} bölgesinde arabalar yüzüyor",
+    "sokaklarda deniz var #tsunami?"
+   ],
+   "rumor": [
+    "{sector} bölgesinde su birikintileri büyük",
+    "{landmark} yakınında gelgit mi yükseldi?",
+    "yine ana su borusu mu, {sector}?",
+    "yağmur giderleri dolu, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"{landmark} yakınında sokakları su bastı.\"",
+    "TELSİZ / ALTYAPI: \"{landmark} yakınında ana su borusu patladı.\"",
+    "TELSİZ / SAHİL: \"{landmark} çevresinde dalga kabarması uyarısı.\"",
+    "TELSİZ / İTFAİYE: \"{landmark} çevresinde suda kurtarma çağrısı.\""
+   ],
+   "trend": [
+    "{landmark} SULAR ALTINDA",
+    "dalga {landmark} çevresini vurdu",
+    "{landmark} çevresinde arabalar yüzüyor",
+    "sokaklarda deniz var, {landmark}"
+   ]
+  },
+  "hurricane": {
+   "sensor": [
+    "{sensor} RÜZGAR {n2} km/sa, sert esiyor",
+    "{sensor} BASINÇ düşüşü, fırtına hücresi",
+    "{sensor} DÖNÜŞ algılandı, {sector}",
+    "{sensor} YAĞMUR {n2} mm/sa"
+   ],
+   "call_vague": [
+    "911: \"Rüzgar delirmiş. Çatı sallanıyor.\"",
+    "911: \"{landmark} çevresinde uçuşan enkaz var.\" [parazit]",
+    "911: \"Elektrik gidip geliyor, gökyüzü yeşil.\"",
+    "TELSİZ: \"{landmark} çevresinde şiddetli rüzgar. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Hortum! {landmark} çevresini yerle bir ediyor!\" [parazit]",
+    "TELSİZ: \"Fırtına hasarı, {landmark} çevresinde çatılar uçtu. Kurtarma lazım.\"",
+    "911: \"Kasırga! {landmark} çevresinde ağaçlar devrildi, yaralılar var!\""
+   ],
+   "social": [
+    "{sector} bölgesinde HORTUM!! #fırtına",
+    "çatı az önce uçtu, {sector}",
+    "{landmark} rüzgardan harap oldu",
+    "kasırga {sector} bölgesini sert vuruyor"
+   ],
+   "rumor": [
+    "{sector} bölgesinde rüzgar var",
+    "fırtına mı geliyor? {sector}",
+    "{landmark} çevresinde ağaçlar sallanıyor",
+    "gökyüzü yeşil görünüyor, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / METEOROLOJİ: \"{landmark} yakınında şiddetli fırtına uyarısı.\"",
+    "TELSİZ / POLİS: \"{landmark} yakınında ağaçlar devrildi, yollar kapalı.\"",
+    "TELSİZ / ALTYAPI: \"{landmark} yakınında hatlar koptu.\"",
+    "TELSİZ / METEOROLOJİ: \"{landmark} çevresinde hortum bulutu görüldü.\""
+   ],
+   "trend": [
+    "HORTUM, {landmark}",
+    "çatı az önce uçtu, {landmark}",
+    "{landmark} rüzgardan harap oldu",
+    "kasırga {landmark} çevresini sert vuruyor"
+   ]
+  },
+  "nuclear": {
+   "sensor": [
+    "{sensor} RADYASYON {n2} uSv/sa, yükseliyor",
+    "{sensor} REAKTÖR soğutucu basıncı DÜŞÜK",
+    "{sensor} ÇEKİRDEK sıcaklığı {n2} C, yüksek",
+    "{sensor} REAKTÖR acil durdurma alarmı"
+   ],
+   "call_vague": [
+    "911: \"Santralde sirenler çalıyor.\"",
+    "911: \"{landmark} yakınında santralden buhar çıkıyor. Normal mi?\" [parazit]",
+    "911: \"Telefonda parazit var, ışıklar zayıfladı.\"",
+    "TELSİZ: \"Reaktör kapısında alarm. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "TELSİZ: \"Reaktör alarmı! {landmark} çevresindeki santralde radyasyon sızıntısı!\" [parazit]",
+    "911: \"Santral çalışanları tahliye ediliyor! {landmark} çevresinde bir şeyler ters!\"",
+    "TELSİZ: \"Reaktör soğutma arızası. {landmark} çevresine KBRN ekibi lazım!\""
+   ],
+   "social": [
+    "{sector} bölgesinde REAKTÖR SIZINTISI!! #nükleer",
+    "santral sirenleri susmuyor, {sector}",
+    "radyasyon mu?? {sector} #erime",
+    "çalışanlar santralden kaçıyor"
+   ],
+   "rumor": [
+    "santralden yine buhar çıkıyor, {sector}",
+    "reaktörde siren var, test mi?",
+    "{sector} bölgesinde geiger uygulaması tuhaf",
+    "santralde sorun varmış diye duydum"
+   ],
+   "radio": [
+    "TELSİZ / REAKTÖR: \"{landmark} yakınında güvenlik sistemi devreye girdi.\"",
+    "TELSİZ / POLİS: \"{landmark} yakınında santral yolları kapalı.\"",
+    "TELSİZ / ŞEBEKE: \"Reaktör devre dışı, {landmark} yakınında güç düşüyor.\"",
+    "TELSİZ / SAĞLIK: \"{landmark} yakınında radyasyon uyarısı.\""
+   ],
+   "trend": [
+    "REAKTÖR SIZINTISI, {landmark}",
+    "santral sirenleri susmuyor, {landmark}",
+    "radyasyon mu? {landmark}",
+    "çalışanlar santralden kaçıyor, {landmark}"
+   ]
+  },
+  "chemical": {
+   "sensor": [
+    "{sensor} GAZ {n2} ppm, zehirli",
+    "{sensor} HAVA kalitesi: zehirli sıçrama",
+    "{sensor} TANK basıncı düşüşü %{n1}",
+    "{sensor} PH {n3}.{n1}, aşındırıcı"
+   ],
+   "call_vague": [
+    "911: \"Limanın oralarda tuhaf bir koku var.\"",
+    "911: \"Bir kamyondan sarı bir şey akıyor.\" [parazit]",
+    "911: \"{landmark} yakınında gözlerim yanıyor.\"",
+    "TELSİZ: \"{landmark} çevresinde kimyasal koku. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Kimyasal bulut! {landmark} çevresinde insanlar yere yığılıyor!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde tank yırtıldı. KBRN ekibi lazım!\"",
+    "911: \"{landmark} çevresinde sarı sis! İnsanlar boğuluyor!\""
+   ],
+   "social": [
+    "{sector} üzerinde KİMYASAL BULUT!! #zehirli",
+    "{sector} bölgesinde herkes öksürüyor",
+    "{landmark} çevresinde sarı sis",
+    "{landmark} çevresinde ne sızdı? #kbrn"
+   ],
+   "rumor": [
+    "tuhaf koku var, {sector} limanı",
+    "{sector} bölgesinde gaz kaçağı mı?",
+    "{landmark} çevresinde kötü koku",
+    "{landmark} yakınında gözler kaşınıyor"
+   ],
+   "radio": [
+    "TELSİZ / İTFAİYE: \"{landmark} yakınında KBRN çağrısı.\"",
+    "TELSİZ / POLİS: \"{landmark} yakınında rıhtımlar kapandı.\"",
+    "TELSİZ / LİMAN: \"{landmark} çevresinde konteyner sızıntısı.\"",
+    "TELSİZ / SAĞLIK: \"{landmark} çevresinde nefes alma şikayetleri.\""
+   ],
+   "trend": [
+    "{landmark} üzerinde KİMYASAL BULUT",
+    "{landmark} çevresinde herkes öksürüyor",
+    "{landmark} çevresinde sarı sis",
+    "{landmark} çevresinde ne sızdı?"
+   ]
+  },
+  "power_surge": {
+   "sensor": [
+    "{sensor} GERİLİM {n2} V, dalgalanma",
+    "{sensor} ŞEBEKE aşırı yük, sigortalar atıyor",
+    "{sensor} TRAFO sıcaklığı kritik",
+    "{sensor} KARARTMA, besleme hattı çöktü"
+   ],
+   "call_vague": [
+    "911: \"Işıklar titredi. Yanık kokuyor.\"",
+    "911: \"Her yer karardı. Alo?\" [parazit]",
+    "911: \"{landmark} yakınında kıvılcımlar var.\"",
+    "TELSİZ: \"{landmark} çevresinde elektrik titremesi. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Karartma! {landmark} çevresinde trafo patladı!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde şebeke dalgalanması. Yangınlar var, şebeke ekibi lazım.\"",
+    "911: \"{landmark} çevresinde elektrik hatları koptu, kıvılcım saçıyor!\""
+   ],
+   "social": [
+    "{sector} bölgesinde KARARTMA!! #elektrik",
+    "{landmark} çevresinde trafo patladı",
+    "her şey yandı, {sector}",
+    "her yerde kıvılcım, {sector}"
+   ],
+   "rumor": [
+    "{sector} bölgesinde ışıklar titriyor",
+    "elektrik kesintisi mi, {sector}?",
+    "{landmark} çevresinde vızıltı var",
+    "wifi gitti, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / ALTYAPI: \"{landmark} yakınında şebeke arızası.\"",
+    "TELSİZ / POLİS: \"{landmark} yakınında trafik ışıkları söndü.\"",
+    "TELSİZ / İTFAİYE: \"{landmark} çevresinde elektrik yangını.\"",
+    "TELSİZ / ALTYAPI: \"{landmark} yakınında dönüşümlü kesinti.\""
+   ],
+   "trend": [
+    "{landmark} çevresinde KARARTMA",
+    "{landmark} çevresinde trafo patladı",
+    "her şey yandı, {landmark}",
+    "her yerde kıvılcım, {landmark}"
+   ]
+  },
+  "wildfire": {
+   "sensor": [
+    "{sensor} SICAKLIK {n2} C, yükseliyor",
+    "{sensor} DUMAN partikülleri yüksek",
+    "{sensor} TERMAL sıcak nokta, {sector}",
+    "{sensor} RÜZGAR {n2} km/sa, yangın riski"
+   ],
+   "call_vague": [
+    "911: \"Rüzgarla duman kokusu geliyor.\"",
+    "911: \"{landmark} üzerinde turuncu bir parıltı var.\" [parazit]",
+    "911: \"Kar gibi kül yağıyor.\"",
+    "TELSİZ: \"{landmark} yakınında duman. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Orman yangını! {landmark} çevresinde alevler!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde yangın cephesi yayılıyor. Tahliye desteği lazım.\"",
+    "911: \"{landmark} çevresinde etrafımızı ateş sardı!\""
+   ],
+   "social": [
+    "{landmark} yakınında ORMAN YANGINI #yangın",
+    "bütün tepe yanıyor, {sector}",
+    "her yer duman, {sector}",
+    "arabamın üstü kül, {sector}"
+   ],
+   "rumor": [
+    "mangal dumanı mı yangın mı? {sector}",
+    "gökyüzü puslu, {sector}",
+    "yanık kokusu var, {landmark}",
+    "gökyüzü turuncu, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / İTFAİYE: \"{landmark} yakınında orman yangını bildirildi.\"",
+    "TELSİZ / POLİS: \"{landmark} yakınında yangın nedeniyle yollar kapalı.\"",
+    "TELSİZ / KORUCU: \"{landmark} yakınında yangın.\"",
+    "TELSİZ / METEOROLOJİ: \"{landmark} yakınında kırmızı bayrak yangın uyarısı.\""
+   ],
+   "trend": [
+    "{landmark} yakınında ORMAN YANGINI",
+    "bütün tepe yanıyor, {landmark}",
+    "her yer duman, {landmark}",
+    "arabamın üstü kül, {landmark}"
+   ]
+  },
+  "riot": {
+   "sensor": [
+    "{sensor} KALABALIK yoğunluğu yüksek",
+    "{sensor} GÜRÜLTÜ {n2} dB, sürekli",
+    "{sensor} KAMERA hareketi, kalabalık dalgası",
+    "{sensor} CAM kırılma alarmı, {sector}"
+   ],
+   "call_vague": [
+    "911: \"Büyük bir kalabalık var, sesler yükseliyor.\"",
+    "911: \"{landmark} önünde bağırışlar var.\" [parazit]",
+    "911: \"Dükkanlar erken kapanıyor. Neden?\"",
+    "TELSİZ: \"{landmark} çevresinde kalabalık toplanıyor. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"İsyan! {landmark} çevresinde camlar kırıldı, ateş yakıldı!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde öfkeli kalabalık. Kalabalık kontrolü lazım.\"",
+    "911: \"{landmark} çevresinde dükkanlara saldırıyorlar!\""
+   ],
+   "social": [
+    "{landmark} çevresinde İSYAN #kargaşa",
+    "{sector} bölgesinde öfkeli kalabalık, uzak durun",
+    "polis barikatı aşıldı, {sector}",
+    "sokaklarda yangınlar var, {sector}"
+   ],
+   "rumor": [
+    "{sector} bölgesinde protesto mu var?",
+    "gürültülü kalabalık, {landmark}",
+    "{landmark} yakınında kalabalık, neden?",
+    "{sector} bölgesinde polis araçları"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"{landmark} yakınında huzursuzluk.\"",
+    "TELSİZ / ULAŞIM: \"İstasyon kapalı, {landmark} yakınında kalabalık.\"",
+    "TELSİZ / POLİS: \"{landmark} çevresinde isyan ihbarı.\"",
+    "TELSİZ / BELEDİYE: \"{landmark} yakınında sükunet çağrısı.\""
+   ],
+   "trend": [
+    "{landmark} çevresinde İSYAN",
+    "{landmark} çevresinde öfkeli kalabalık, uzak durun",
+    "polis barikatı aşıldı, {landmark}",
+    "sokaklarda yangınlar var, {landmark}"
+   ]
+  },
+  "collision": {
+   "sensor": [
+    "{sensor} TRAFİK durdu, {sector}",
+    "{sensor} otoyolda ÇARPMA algılandı",
+    "{sensor} KAMERA: zincirleme kaza",
+    "{sensor} HAVA YASTIĞI sinyali, çoklu"
+   ],
+   "call_vague": [
+    "911: \"Yolda yüksek bir çarpma sesi geldi.\"",
+    "911: \"{landmark} yakınında arabalar durdu.\" [parazit]",
+    "911: \"Kornalar ve fren sesleri. Alo?\"",
+    "TELSİZ: \"{landmark} çevresinde trafik sıkışıklığı. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Zincirleme kaza! {landmark} çevresinde arabalar yanıyor, yaralılar var!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde çok araçlı kaza. Kurtarma lazım.\"",
+    "911: \"{landmark} çevresinde bir otobüs devrildi!\""
+   ],
+   "social": [
+    "{landmark} çevresinde dev kaza #zincirlemekaza",
+    "{sector} bölgesinde yol kapandı",
+    "otobüs devrildi, {sector}",
+    "her yerde siren, {sector}"
+   ],
+   "rumor": [
+    "trafik berbat, {sector}",
+    "{landmark} yakınında kaza mı var?",
+    "kornalar susmuyor, {sector}",
+    "yollar ağır akıyor, {sector}"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"Kaza, {landmark} yakınında yol kapalı.\"",
+    "TELSİZ / ULAŞIM: \"{landmark} yakınında otobüs gecikmeleri.\"",
+    "TELSİZ / İTFAİYE: \"{landmark} çevresinde araç içinden kurtarma.\"",
+    "TELSİZ / KARAYOLLARI: \"{landmark} yakınında zincirleme kaza.\""
+   ],
+   "trend": [
+    "{landmark} çevresinde dev kaza",
+    "{landmark} bölgesinde yol kapandı",
+    "otobüs devrildi, {landmark}",
+    "her yerde siren, {landmark}"
+   ]
+  },
+  "evacuation": {
+   "sensor": [
+    "{sensor} çıkışlarda KALABALIK dalgası",
+    "{sensor} ÇIKIŞ kapalı, {sector}",
+    "{sensor} DOLULUK %{n2}, sınırın üstünde",
+    "{sensor} ALARM, tahliye başlatıldı"
+   ],
+   "call_vague": [
+    "911: \"Herkes dışarı koşuyor.\"",
+    "911: \"{landmark} çevresinde alarm susmuyor.\" [parazit]",
+    "911: \"İnsanlar sıkıştı, çıkamıyoruz.\"",
+    "TELSİZ: \"{landmark} yakınında kalabalık. Tamam.\" [parazit]"
+   ],
+   "call_confirm": [
+    "911: \"Mahsur siviller var! {landmark} çevresinde tahliye lazım!\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde siviller mahsur. Hastaneye nakil lazım.\"",
+    "911: \"Lütfen, insanlar çıkamıyor! {landmark} çevresinden hastaneye!\""
+   ],
+   "social": [
+    "{sector} bölgesinde tahliye #yardım",
+    "{landmark} çevresinde insanlar mahsur",
+    "herkes koşuyor, {sector}",
+    "çıkış kapalı!! {sector}"
+   ],
+   "rumor": [
+    "alarm çalıyor, {sector}",
+    "{landmark} çevresinde kalabalık, neden?",
+    "{sector} bölgesinde tatbikat mı var?",
+    "insanlar {landmark} çevresini terk ediyor"
+   ],
+   "radio": [
+    "TELSİZ / POLİS: \"{landmark} yakınında tahliye emri.\"",
+    "TELSİZ / İTFAİYE: \"{landmark} çevresinde mahsur siviller.\"",
+    "TELSİZ / HASTANE: \"Boş yatak var, {landmark} yakınından hasta geliyor.\"",
+    "TELSİZ / ULAŞIM: \"{landmark} yakınında çıkış kapalı.\""
+   ],
+   "trend": [
+    "{landmark} çevresinde tahliye",
+    "{landmark} çevresinde insanlar mahsur",
+    "herkes koşuyor, {landmark}",
+    "çıkış kapalı, {landmark}"
+   ]
+  }
+ },
+ "symptoms": {
+  "shaking": {
+   "sensor": [
+    "{sensor} TİTREŞİM {n3}.{n1}, {landmark}",
+    "{sensor} ZEMİN HAREKETİ, {landmark}",
+    "{sensor} {landmark} yakınında EĞİM +0.{n1} derece"
+   ],
+   "call_vague": [
+    "911: \"{landmark} yakınında her şey sallandı.\"",
+    "911: \"{landmark} yanında yüksek bir gümbürtü.\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde zemin oynadı. Tamam.\" [parazit]"
+   ]
+  },
+  "smoke": {
+   "sensor": [
+    "{sensor} DUMAN partikülleri yüksek, {landmark}",
+    "{sensor} {landmark} yakınında HAVA KALİTESİ kötü",
+    "{sensor} ISI {n2} C, {landmark}"
+   ],
+   "call_vague": [
+    "911: \"{landmark} üzerinde duman var.\"",
+    "911: \"{landmark} yakınında berbat bir koku var.\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde duman sütunu. Tamam.\" [parazit]"
+   ]
+  },
+  "power": {
+   "sensor": [
+    "{sensor} ŞEBEKE dalgalanması %{n1}, {landmark}",
+    "{sensor} {landmark} yakınında HAT arızası",
+    "{sensor} GERİLİM dengesiz, {landmark}"
+   ],
+   "call_vague": [
+    "911: \"{landmark} yanında ışıklar sürekli titriyor.\"",
+    "911: \"{landmark} yakınında elektrik gitti.\" [parazit]",
+    "TELSİZ: \"{landmark} çevresinde kesinti. Tamam.\" [parazit]"
+   ]
+  },
+  "water": {
+   "sensor": [
+    "{sensor} SU SEVİYESİ +{n1} cm, {landmark}",
+    "{sensor} {landmark} yakınında GİDER taşması"
+   ],
+   "call_vague": [
+    "911: \"{landmark} yanında su sokaktan yukarı çıkıyor.\"",
+    "911: \"{landmark} yakınında giderler geri tepiyor.\" [parazit]"
+   ]
+  },
+  "alarm": {
+   "sensor": [
+    "{sensor} SAHA ALARMI, {landmark}",
+    "{sensor} {landmark} yakınında DOZİMETRE yüksek"
+   ],
+   "call_vague": [
+    "911: \"{landmark} çevresinde sirenler çalıyor.\"",
+    "TELSİZ: \"{landmark} çevresinde alarm. Tamam.\" [parazit]"
+   ]
+  },
+  "crowd": {
+   "sensor": [
+    "{sensor} KALABALIK yoğunluğu yüksek, {landmark}",
+    "{sensor} {landmark} yakınında TRAFİK durdu"
+   ],
+   "call_vague": [
+    "911: \"{landmark} çevresinde bağıran büyük bir kalabalık var.\"",
+    "911: \"{landmark} yakınında sokak kapalı.\" [parazit]"
+   ]
+  }
+ },
+ "casualty": {
+  "_help": "Medic assessments for casualty events, sent to the ECM. Each scenario is two reports; 'hospital' scenarios mean the right call is General Hospital, 'alt' scenarios mean the district's alternate clinic. Tokens: {n} injured count, {alt} alternate district name.",
+  "hospital": [
+   [
+    "{n} injured, three critical with internal bleeding.",
+    "Only General Hospital has surgeons on shift tonight."
+   ],
+   [
+    "{n} burn victims, several severe.",
+    "{alt} clinic has no burn unit."
+   ],
+   [
+    "{n} injured, two in cardiac arrest.",
+    "Road to {alt} is flooded. Hospital route is clear."
+   ],
+   [
+    "{n} injured, one child unresponsive.",
+    "{alt} clinic lost power an hour ago."
+   ]
+  ],
+  "alt": [
+   [
+    "{n} injured, mostly cuts and fractures.",
+    "General Hospital is at capacity and diverting."
+   ],
+   [
+    "{n} walking wounded, all stable.",
+    "Ring road to Downtown is blocked by debris."
+   ],
+   [
+    "{n} injured, none critical.",
+    "General Hospital trauma bay is in lockdown."
+   ],
+   [
+    "{n} smoke inhalation cases, mild.",
+    "{alt} clinic has beds free. General has a two-hour wait."
+   ]
+  ]
+ }
+}

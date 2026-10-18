@@ -1,0 +1,10 @@
+{
+  "_help": "Game-over taglines. The intro text lives in scripts/intro_terminal.gd.",
+  "game_over_taglines": [
+    "The city stopped believing in you.",
+    "The lines went quiet. Nobody was coming.",
+    "Public trust has collapsed. Command is transferred.",
+    "The grid is dark, and so is the switchboard.",
+    "Another duty officer will take your seat."
+  ]
+}

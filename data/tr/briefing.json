@@ -1,0 +1,52 @@
+{
+  "_help": "Text for the briefing book (scripts/ui/briefing.gd). One entry per tab. 'body' lines are joined with newlines and support BBCode. The drawn diagram on the right page is in briefing.gd.",
+  "tabs": [
+    {
+      "tab": "GÖREV",
+      "title": "GÖREVİN",
+      "body": [
+        "[color=#ffd933]10 DAKİKALIK VARDİYAYI ATLAT[/color]",
+        "KAMU GÜVENİ çubuğunu sayaç 10:00 olana kadar sıfırın üstünde tut. Güven sıfıra düşerse vardiya biter.",
+        "",
+        "[color=#ffd933]GÜVEN NASIL DEĞİŞİR[/color]",
+        "Doğru ekibi göndermek güveni geri kazandırır. Bir uyarının süresinin dolması ya da yanlış ekip göndermek güven kaybettirir.",
+        "",
+        "[color=#ffd933]UYARILARA ERKEN YANIT VER[/color]",
+        "Her uyarı yeşil başlar, sonra sarıya, sonra kırmızıya döner. Ekibi ne kadar erken gönderirsen o kadar çok güven kazanırsın."
+      ]
+    },
+    {
+      "tab": "SEVK",
+      "title": "OKU, SONRA SEVK ET",
+      "body": [
+        "[color=#ffd933]CANLI AKIŞI KONTROL ET[/color]",
+        "Akışı açmak için herhangi bir yere sağ tıkla, kapatmak için tekrar sağ tıkla. Raporlar çoğu zaman uyarıdan önce gelir, akışı sık sık kontrol et.",
+        "",
+        "[color=#ffd933]EKİP GÖNDER[/color]",
+        "- Uyarıya, sonra bir ekibe tıkla.",
+        "- Ya da 1, 2, 3 tuşuna bas, sonra uyarıya tıkla.",
+        "- Ya da bir ekip kartını uyarının üzerine sürükle.",
+        "",
+        "[color=#ffd933]İŞİ BİTEN EKİPLERİ KULLAN[/color]",
+        "İşini bitiren ekip haritada parlayan bir etiketle bekler. Etikete tıkla ya da onu sonraki uyarıya sürükle."
+      ]
+    },
+    {
+      "tab": "KONTROLLER",
+      "title": "DURAKLATMA VE KONTROLLER",
+      "body": [
+        "[color=#ffd933]İSTEDİĞİN AN DURAKLAT[/color]",
+        "Vardiyayı duraklatmak için ESC tuşuna bas. Devam edene kadar sayaç ve tüm uyarılar durur.",
+        "",
+        "[color=#ffd933]BUNU TEKRAR OKU[/color]",
+        "Duraklatma menüsünde KONTROLLER seçeneği bu brifingi istediğin zaman yeniden açar.",
+        "",
+        "[color=#ffd933]HIZLI TUŞLAR[/color]",
+        "- Sağ tık: canlı akışı aç veya kapat",
+        "- 1, 2, 3: ekip seç",
+        "- Shift + sektöre tıkla: önemli noktalar",
+        "- ESC: duraklat"
+      ]
+    }
+  ]
+}

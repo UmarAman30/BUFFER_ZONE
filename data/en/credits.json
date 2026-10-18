@@ -1,0 +1,133 @@
+{
+  "_help": "Credits shown by CREDITS.EXE on the title screen. Each section has a heading and entries: name, detail, link (link may be empty). Turkish copy: data/tr/credits.json.",
+  "title": "CREDITS",
+  "subtitle": "BUFFER ZONE  -  made in 48 hours for CIVIL GAME JAM 2026",
+  "sections": [
+    {
+      "heading": "TEAM",
+      "entries": [
+        {
+          "name": "Umar Aman",
+          "detail": "Developer",
+          "link": ""
+        },
+        {
+          "name": "Rida Muneeb",
+          "detail": "Developer",
+          "link": ""
+        },
+        {
+          "name": "Ali Imran",
+          "detail": "Developer",
+          "link": ""
+        },
+        {
+          "name": "Wamiq Haider",
+          "detail": "Developer; character drawings, team icons and the original city map",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "MUSIC",
+      "entries": [
+        {
+          "name": "Dark Ambience Loop",
+          "detail": "by Iwan Gabovitch (qubodup.net)  -  CC-BY 3.0",
+          "link": "opengameart.org/content/dark-ambience-loop"
+        }
+      ]
+    },
+    {
+      "heading": "SOUND EFFECTS",
+      "entries": [
+        {
+          "name": "Ultimate UI SFX Pack",
+          "detail": "by JDSherbert  -  used with credit, per the author's license",
+          "link": "jdsherbert.itch.io/ultimate-ui-sfx-pack"
+        },
+        {
+          "name": "400 Sounds Pack",
+          "detail": "by Chequered Ink  -  royalty-free license",
+          "link": "ci.itch.io/400-sounds-pack"
+        },
+        {
+          "name": "UI Buttons | Sound Effects Pack + Glitches",
+          "detail": "by pknm  -  CC BY 4.0",
+          "link": "pknm.itch.io/ui-buttons-sound-effects-pack"
+        },
+        {
+          "name": "BigSoundBank",
+          "detail": "recordings by Joseph Sardin  -  CC0",
+          "link": "bigsoundbank.com"
+        },
+        {
+          "name": "Changes",
+          "detail": "Sounds and music were trimmed, looped, mixed and normalised for the game.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "SHADER",
+      "entries": [
+        {
+          "name": "Realistic CRT shader",
+          "detail": "optimised and packed by c64cosmin; vignette and warp by pend00; scanlines by Timothy Lottes, ported by ahopness  -  CC0",
+          "link": "godotshaders.com/shader/realistic-crt-shader"
+        }
+      ]
+    },
+    {
+      "heading": "FONTS",
+      "entries": [
+        {
+          "name": "Home Video",
+          "detail": "by GGBotNet  -  CC0",
+          "link": "ggbot.itch.io/home-video-font"
+        },
+        {
+          "name": "VT323",
+          "detail": "by Peter Hull  -  SIL Open Font License 1.1",
+          "link": "fonts.google.com/specimen/VT323"
+        }
+      ]
+    },
+    {
+      "heading": "ART",
+      "entries": [
+        {
+          "name": "City map",
+          "detail": "hand-drawn by Wamiq Haider, touched up with an AI image tool",
+          "link": ""
+        },
+        {
+          "name": "Team portraits and icons",
+          "detail": "hand-drawn by Wamiq Haider",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "ENGINE",
+      "entries": [
+        {
+          "name": "Godot Engine",
+          "detail": "(c) Juan Linietsky, Ariel Manzur and contributors  -  MIT License",
+          "link": "godotengine.org/license"
+        }
+      ]
+    },
+    {
+      "heading": "AI ASSISTANCE",
+      "entries": [
+        {
+          "name": "Claude",
+          "detail": "used to touch up the base game code and for the Turkish translation",
+          "link": ""
+        }
+      ]
+    }
+  ],
+  "footer": "Thank you for playing.  Stay aware."
+}

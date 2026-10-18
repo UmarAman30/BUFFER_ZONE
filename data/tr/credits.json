@@ -1,0 +1,133 @@
+{
+  "_help": "Credits shown by CREDITS.EXE on the title screen. Each section has a heading and entries: name, detail, link (link may be empty). Turkish copy: data/tr/credits.json.",
+  "title": "YAPIMCILAR",
+  "subtitle": "BUFFER ZONE  -  CIVIL GAME JAM 2026 için 48 saatte yapıldı",
+  "sections": [
+    {
+      "heading": "EKİP",
+      "entries": [
+        {
+          "name": "Umar Aman",
+          "detail": "Geliştirici",
+          "link": ""
+        },
+        {
+          "name": "Rida Muneeb",
+          "detail": "Geliştirici",
+          "link": ""
+        },
+        {
+          "name": "Ali Imran",
+          "detail": "Geliştirici",
+          "link": ""
+        },
+        {
+          "name": "Wamiq Haider",
+          "detail": "Geliştirici; karakter çizimleri, ekip simgeleri ve özgün şehir haritası",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "MÜZİK",
+      "entries": [
+        {
+          "name": "Dark Ambience Loop",
+          "detail": "Iwan Gabovitch (qubodup.net)  -  CC-BY 3.0",
+          "link": "opengameart.org/content/dark-ambience-loop"
+        }
+      ]
+    },
+    {
+      "heading": "SES EFEKTLERİ",
+      "entries": [
+        {
+          "name": "Ultimate UI SFX Pack",
+          "detail": "JDSherbert  -  yazarın lisansı gereği atıfla kullanıldı",
+          "link": "jdsherbert.itch.io/ultimate-ui-sfx-pack"
+        },
+        {
+          "name": "400 Sounds Pack",
+          "detail": "Chequered Ink  -  telifsiz lisans",
+          "link": "ci.itch.io/400-sounds-pack"
+        },
+        {
+          "name": "UI Buttons | Sound Effects Pack + Glitches",
+          "detail": "pknm  -  CC BY 4.0",
+          "link": "pknm.itch.io/ui-buttons-sound-effects-pack"
+        },
+        {
+          "name": "BigSoundBank",
+          "detail": "Joseph Sardin kayıtları  -  CC0",
+          "link": "bigsoundbank.com"
+        },
+        {
+          "name": "Değişiklikler",
+          "detail": "Sesler ve müzik oyun için kırpıldı, döngüye alındı, karıştırıldı ve normalize edildi.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "SHADER",
+      "entries": [
+        {
+          "name": "Realistic CRT shader",
+          "detail": "optimize eden ve paketleyen c64cosmin; vinyet ve bükülme pend00; tarama çizgileri Timothy Lottes, aktaran ahopness  -  CC0",
+          "link": "godotshaders.com/shader/realistic-crt-shader"
+        }
+      ]
+    },
+    {
+      "heading": "YAZI TİPLERİ",
+      "entries": [
+        {
+          "name": "Home Video",
+          "detail": "GGBotNet  -  CC0",
+          "link": "ggbot.itch.io/home-video-font"
+        },
+        {
+          "name": "VT323",
+          "detail": "Peter Hull  -  SIL Open Font License 1.1",
+          "link": "fonts.google.com/specimen/VT323"
+        }
+      ]
+    },
+    {
+      "heading": "GÖRSELLER",
+      "entries": [
+        {
+          "name": "Şehir haritası",
+          "detail": "Wamiq Haider'ın elle çizimi, bir yapay zekâ görsel aracıyla rötuşlandı",
+          "link": ""
+        },
+        {
+          "name": "Ekip portreleri ve simgeleri",
+          "detail": "Wamiq Haider'ın elle çizimi",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "heading": "MOTOR",
+      "entries": [
+        {
+          "name": "Godot Engine",
+          "detail": "(c) Juan Linietsky, Ariel Manzur ve katkıda bulunanlar  -  MIT Lisansı",
+          "link": "godotengine.org/license"
+        }
+      ]
+    },
+    {
+      "heading": "YAPAY ZEKÂ DESTEĞİ",
+      "entries": [
+        {
+          "name": "Claude",
+          "detail": "temel oyun kodunun rötuşlanmasında ve Türkçe çeviride kullanıldı",
+          "link": ""
+        }
+      ]
+    }
+  ],
+  "footer": "Oynadığın için teşekkürler.  Farkında kal."
+}

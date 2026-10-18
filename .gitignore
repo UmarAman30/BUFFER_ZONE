@@ -1,0 +1,33 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exported builds (the .exe goes in the submission ZIP, not the repo)
+BufferZone_Build/
+*.exe
+*.pck
+*.zip
+
+# Raw downloaded sound files (not redistributable; see README "Files not in this repo")
+assets/audio_src/
+
+# Sounds from JDSherbert's "Ultimate UI SFX Pack": the license forbids redistributing them
+assets/audio/ui_click.wav
+assets/audio/ui_click.wav.import
+assets/audio/feed_open.wav
+assets/audio/feed_open.wav.import
+assets/audio/screen_switch.wav
+assets/audio/screen_switch.wav.import
+assets/audio/feed_close.wav
+assets/audio/feed_close.wav.import
+assets/audio/feed_ping.wav
+assets/audio/feed_ping.wav.import
+
+# Local testing tool (not part of the game)
+mcp_interaction_server.gd
+mcp_interaction_server.gd.uid
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,10 @@
+{
+  "_help": "Game-over taglines. The intro text lives in scripts/intro_terminal.gd.",
+  "game_over_taglines": [
+    "Şehir sana inanmayı bıraktı.",
+    "Hatlar sustu. Kimse gelmiyordu.",
+    "Kamu güveni çöktü. Komuta devredildi.",
+    "Şebeke karanlık, santral de öyle.",
+    "Yerine başka bir nöbetçi memur geçecek."
+  ]
+}
